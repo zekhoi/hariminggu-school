@@ -10,5 +10,23 @@ Terdapat dua folder yaitu `frontend` dan `backend`, di mana `frontend` berisi so
 
 # Demo
 
-- [Frontend](https://hariminggu.zekhoi.dev)
-- [Backend](https://apihariminggu.zekhoi.dev)
+- [Frontend](https://hariminggucom.vercel.app/)
+- [Backend](https://hariminggu.fly.dev/)
+
+# API Documentation
+
+## Get All Course
+
+METHOD: GET
+
+URL: https://hariminggu.fly.dev/api/courses
+
+Query Parameter:
+
+- `category` (optional): Bootcamp|ProClass
+
+## Get Course Detail
+
+METHOD: GET
+
+URL: https://hariminggu.fly.dev/api/courses/{slug}
