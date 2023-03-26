@@ -19,21 +19,22 @@ jobs:
           extensions: mbstring, intl, pdo_mysql, zip, gd, exif, pcntl, bcmath, soap, curl, dom, fileinfo, json, xml, ctype, iconv, tokenizer
           coverage: none
       - name: Install dependencies
+        working-directory: ./frontend
         run: composer install --prefer-dist --no-progress --no-suggest
       - name: Run tests
+        working-directory: ./frontend
         run: vendor/bin/phpunit
 
   deploy:
     needs: test
     name: Deploy app
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./backend
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only
+      - name: Deploy to Fly.io
+        run: flyctl deploy --remote-only
+        working-directory: ./backend
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
