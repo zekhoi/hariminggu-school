@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import { getCourse } from "@/services/course.service";
-import DefaultLayout from "@/components/templates/DefaultLayout";
-import { CourseType } from "@/types/course";
 import Button from "@/components/atoms/Button";
-import Image from "next/image";
 import LoadingScreen from "@/components/organisms/LoadingScreen";
+import DefaultLayout from "@/components/templates/DefaultLayout";
+import { getCourse } from "@/services/course.service";
+import { CourseType } from "@/types/course";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 
 export default function Course() {
   const [Loading, setLoading] = useState(true);

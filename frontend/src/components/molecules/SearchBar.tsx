@@ -14,7 +14,8 @@ export default function SearchBar({ ...rest }: SearchBarProps) {
       />
       <button
         type="submit"
-        className="rounded-r bg-primary absolute right-0 px-4 h-full text-white text-sm">
+        className="rounded-r bg-primary absolute right-0 px-4 h-full text-white text-sm"
+      >
         Cari
       </button>
     </div>

@@ -1,8 +1,8 @@
-import React from "react";
 import { CourseType } from "@/types/course";
+import { formatRupiah } from "@/utils/currency";
 import Image from "next/image";
 import Link from "next/link";
-import { formatRupiah } from "@/utils/currency";
+import React from "react";
 import { FaBookOpen, FaClock, FaTerminal } from "react-icons/fa";
 
 type CourseCardProps = {

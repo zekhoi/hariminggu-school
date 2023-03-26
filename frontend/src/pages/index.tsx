@@ -1,11 +1,11 @@
-import { getAllCourses } from "@/services/course.service";
-import { useEffect, useState } from "react";
-import DefaultLayout from "@/components/templates/DefaultLayout";
-import { CourseType } from "@/types/course";
 import Button from "@/components/atoms/Button";
 import CourseCard from "@/components/molecules/CourseCard";
 import Hero from "@/components/organisms/Hero";
+import DefaultLayout from "@/components/templates/DefaultLayout";
 import { descriptions } from "@/constants/course";
+import { getAllCourses } from "@/services/course.service";
+import { CourseType } from "@/types/course";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -41,14 +41,16 @@ export default function Home() {
                 className="rounded px-8 md:px-12 py-3 text-xs md:text-sm font-bold"
                 active={category === "Bootcamp"}
                 color={category === "Bootcamp" ? "primary" : "gray"}
-                onClick={() => setCategory("Bootcamp")}>
+                onClick={() => setCategory("Bootcamp")}
+              >
                 BOOTCAMP
               </Button>
               <Button
                 className="rounded px-8 md:px-12 py-3 text-xs md:text-sm font-bold"
                 active={category === "ProClass"}
                 color={category === "ProClass" ? "primary" : "gray"}
-                onClick={() => setCategory("ProClass")}>
+                onClick={() => setCategory("ProClass")}
+              >
                 PROCLASS
               </Button>
             </div>

@@ -33,7 +33,8 @@ export default function Button({
         variant !== "outline" ? colors[color] : "",
         variant == "primary" && (active ? "bg-primary" : "bg-gray-400")
       )}
-      {...rest}>
+      {...rest}
+    >
       {children}
     </button>
   );

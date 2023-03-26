@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/image";
 import SearchBar from "@/components/molecules/SearchBar";
+import Image from "next/image";
+import React from "react";
 
-export default function () {
+export default function Hero() {
   return (
     <div className="flex px-4 pt-20 pb-8 md:min-h-screen bg-grayed">
       <div className="flex items-center custom-container">

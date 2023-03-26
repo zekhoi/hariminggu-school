@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import Button from "@/components/atoms/Button";
 import Logo from "@/components/atoms/Logo";
 import clsx from "@/lib/classmerger";
-import Button from "@/components/atoms/Button";
-import { FaTimes, FaEquals } from "react-icons/fa";
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import { FaEquals, FaTimes } from "react-icons/fa";
 
 type NavbarProps = {
   type?: "static" | "dynamic";
@@ -42,13 +42,15 @@ export default function Navbar({ type = "dynamic" }: NavbarProps) {
         (isTransparent && type) === "dynamic"
           ? "bg-transparent text-white"
           : "bg-white"
-      )}>
+      )}
+    >
       <div className="custom-container flex flex-col lg:flex-row gap-3">
         <div className="flex flex-row items-center justify-between">
           <Logo color={isTransparent && !toggleOpen ? "white" : "primary"} />
           <button
             className="lg:hidden"
-            onClick={() => setToggleOpen(!toggleOpen)}>
+            onClick={() => setToggleOpen(!toggleOpen)}
+          >
             {!toggleOpen ? (
               <FaEquals className="icon" />
             ) : (
@@ -60,14 +62,16 @@ export default function Navbar({ type = "dynamic" }: NavbarProps) {
           className={clsx(
             "lg:flex flex-col w-full md:flex-row lg:ml-auto float-right justify-end items-center gap-6",
             toggleOpen ? "flex" : "hidden"
-          )}>
+          )}
+        >
           <div className="flex w-full lg:w-auto flex-col md:flex-row gap-6">
             <Link
               href="/program"
               className={clsx(
                 "text-sm font-semibold",
                 isTransparent && !toggleOpen ? "text-white" : "text-gray-700"
-              )}>
+              )}
+            >
               Program
             </Link>
             <Link
@@ -75,7 +79,8 @@ export default function Navbar({ type = "dynamic" }: NavbarProps) {
               className={clsx(
                 "text-sm font-semibold",
                 isTransparent && !toggleOpen ? "text-white" : "text-gray-700"
-              )}>
+              )}
+            >
               Video Course
             </Link>
             <Link
@@ -83,7 +88,8 @@ export default function Navbar({ type = "dynamic" }: NavbarProps) {
               className={clsx(
                 "text-sm font-semibold",
                 isTransparent && !toggleOpen ? "text-white" : "text-gray-700"
-              )}>
+              )}
+            >
               Corporate
             </Link>
           </div>

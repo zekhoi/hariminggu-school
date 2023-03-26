@@ -1,5 +1,5 @@
-import React from "react";
 import { MenuType } from "@/types/menu";
+import React from "react";
 
 type FooterMenuProps = {
   title: string;

@@ -1,6 +1,6 @@
-import React from "react";
-import Head from "next/head";
 import Logo from "@/components/atoms/Logo";
+import Head from "next/head";
+import React from "react";
 
 export default function LoadingScreen() {
   return (

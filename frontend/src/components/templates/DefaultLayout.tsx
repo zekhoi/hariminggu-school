@@ -1,7 +1,7 @@
-import React from "react";
-import Head from "next/head";
-import Navbar from "@/components/organisms/Navbar";
 import Footer from "@/components/organisms/Footer";
+import Navbar from "@/components/organisms/Navbar";
+import Head from "next/head";
+import React from "react";
 
 type DefaultLayoutProps = {
   title: string;

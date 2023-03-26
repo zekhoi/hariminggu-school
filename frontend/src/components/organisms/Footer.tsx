@@ -1,14 +1,14 @@
-import React from "react";
+import CopyrightIcon from "@/components/atoms/CopyrightIcon";
+import Logo from "@/components/atoms/Logo";
 import FooterMenu from "@/components/molecules/FooterMenu";
 import {
-  layananItems,
-  tentangItems,
   bantuanItems,
   komunitasItems,
+  layananItems,
+  tentangItems,
 } from "@/constants/menu";
+import React from "react";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
-import Logo from "@/components/atoms/Logo";
-import CopyrightIcon from "@/components/atoms/CopyrightIcon";
 
 export default function Footer() {
   return (
