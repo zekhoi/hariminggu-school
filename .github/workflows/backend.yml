@@ -16,13 +16,15 @@ jobs:
         working-directory: ./backend
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: recursive
       - uses: shivammathur/setup-php@v2
         with:
           php-version: "7.4"
           extensions: mbstring, intl, pdo_mysql, zip, gd, exif, pcntl, bcmath, soap, curl, dom, fileinfo, json, xml, ctype, iconv, tokenizer
           coverage: none
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
+        run: composer update --prefer-dist --no-progress --no-suggest
       - name: Run tests
         run: vendor/bin/phpunit
 
