@@ -8,6 +8,22 @@ Terdapat dua folder yaitu `frontend` dan `backend`, di mana `frontend` berisi so
 - Laravel
 - PostgreSQL (supabase)
 
+# How to run
+
+### Frontend
+
+- `cd frontend`
+- `yarn install`
+- `yarn dev`
+- `open http://localhost:3000`
+
+### Backend
+
+- `cd backend`
+- `composer install`
+- `php artisan serve`
+- `open http://localhost:8000`
+
 # Demo
 
 - [Frontend](https://hariminggucom.vercel.app/)
